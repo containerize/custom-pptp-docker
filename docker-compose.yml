@@ -1,0 +1,10 @@
+pptpd:
+  image: whuwxl/pptpd
+  ports:
+   - "1723:1723"
+  volumes:
+   - ./pptpd.conf:/etc/pptpd.conf:ro
+   - ./chap-secrets:/etc/ppp/chap-secrets:ro
+  privileged: true
+  restart: always
+
